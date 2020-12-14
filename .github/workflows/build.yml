@@ -15,7 +15,7 @@ jobs:
     - name: prepare environment
       run: |
         brew install ldid make
-        echo "THEOS=/Users/runner/work/*/*/theos" >> $GITHUB_ENV
+        echo "THEOS=$GITHUB_WORKSPACE/theos" >> $GITHUB_ENV
         echo "PATH=/usr/local/opt/make/libexec/gnubin:$PATH" >> $GITHUB_ENV
         
     
@@ -27,7 +27,7 @@ jobs:
       id: cache
       uses: actions/cache@v2
       with:
-        path: /Users/runner/work/*/*/theos
+        path: ${{ github.workspace }}/theos
         key: ${{ runner.os }}-${{ steps.verify-cache.outputs.heads }}
 
     - name: get theos
@@ -40,22 +40,16 @@ jobs:
 
     - name: get sdks
       if: steps.cache.outputs.cache-hit != 'true'
-      run: |
-        curl -LO https://github.com/xybp888/iOS-SDKs/archive/master.zip
-        TMP=$(mktemp -d)
-        unzip -q master.zip -d $TMP
-        if [ ! -d "/Users/runner/work/*/*/theos/sdks" ]; then
-          mkdir /Users/runner/work/*/*/theos/sdks
-        fi
-        mv $TMP/iOS-SDKs-master/*.sdk /Users/runner/work/*/*/theos/sdks
-        rm -r master.zip $TMP
+      uses: actions/checkout@v2
+      with:
+        path: 'theos/sdks'
+        repository: xybp888/iOS-SDKs
     - name: actual build
       run: |
-        cd src
         rm packages/*
         make package FINALPACKAGE=1
     - name: upload deb
       uses: actions/upload-artifact@v2.2.0
       with:
         name: 'Package'
-        path: ${{ github.workspace }}/src/packages/*.deb
+        path: ${{ github.workspace }}/packages/*.deb
