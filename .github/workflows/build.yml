@@ -46,7 +46,7 @@ jobs:
         repository: xybp888/iOS-SDKs
     - name: actual build
       run: |
-        rm packages/*
+        rm -f packages/*
         make package FINALPACKAGE=1
     - name: upload deb
       uses: actions/upload-artifact@v2.2.0
