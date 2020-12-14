@@ -1,0 +1,9 @@
+Package: com.randomblock1.fleetsbgone
+Name: FleetsBGone
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Remove Twitter Fleets
+Maintainer: Randomblock1
+Author: Randomblock1
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)
