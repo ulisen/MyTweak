@@ -13,7 +13,7 @@ jobs:
         submodules: true
     
     - name: Prepare Theos
-      uses: Randomblock1/theos-action@main
+      uses: Randomblock1/theos-action@v0
       with:
         theos-sdks: 'https://github.com/xybp888/iOS-SDKs'
       
