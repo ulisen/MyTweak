@@ -23,7 +23,8 @@ jobs:
       with:
         path: ${{ github.workspace }}/theos
         key: ${{ runner.os }}-${{ steps.verify-cache.outputs.heads }}
-    
+
+# Don't use @main, this repo is specifically for testing it.
     - name: Prepare Theos
       uses: Randomblock1/theos-action@main
       with:
@@ -33,6 +34,7 @@ jobs:
       run: |
         rm -f packages/*
         make package FINALPACKAGE=1
+
     - name: Upload package
       uses: actions/upload-artifact@v2.2.0
       with:
