@@ -1,8 +1,9 @@
 %hook HXClotho
+// 
 + (bool)isSpecialServiceOrdered:(int) sid{
 	return true;
 }
-
+//
 + (bool)isSpecial102ServiceOrdered:(int) sid{
 	return true;
 }
