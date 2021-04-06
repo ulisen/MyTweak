@@ -1,19 +1,19 @@
-%hook HXClotho
-// 
-+ (bool)isSpecialServiceOrdered:(int) sid{
-	return true;
-}
-//
-+ (bool)isSpecial102ServiceOrdered:(int) sid{
-	return true;
-}
+%hook className
 
-+ (bool)isSpecial103ServiceOrdered:(int) sid{
-	return true;
+/*
+-(type)methodName:(type) arg1{
+	to dong something...
+	return type if it has
 }
-
-+ (bool)getFuncWithSid:(id) sid bits:(long long)bit{
-	return true;
+-(type)methodName:(type) arg1 alias:(type) arg2{
+	to do something..
+	return type if it has
 }
+// classMethod
++(type)methodName:(type) arg1 alias:(type) arg2{
+	to do something
+	return type if it has
+}
+*/
 
 %end
