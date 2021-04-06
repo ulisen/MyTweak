@@ -6,7 +6,7 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = thsCrack
 
-FleetsBGone_FILES = Tweak.x
-FleetsBGone_CFLAGS = -fobjc-arc
+thsCrack_FILES = Tweak.x
+thsCrack_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/tweak.mk
