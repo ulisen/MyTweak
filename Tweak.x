@@ -1,3 +1,5 @@
+#import <substrate.h>
+
 bool (*old_func)(int);
 bool new_func(int) {
 	return true;
