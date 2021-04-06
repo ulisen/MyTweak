@@ -1,8 +1,8 @@
 Package: com.lisen.ths.crack
-Name: thsCrack
+Name: THSHelper
 Version: 1.0
 Architecture: iphoneos-arm
-Description: ths crack
+Description: THS辅助工具
 Maintainer: ulisen 
 Author: ulisen
 Section: Tweaks
