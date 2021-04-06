@@ -1,8 +1,8 @@
 #import <substrate.h>
 #import <UIKit/UIKit.h>
 
-bool (*old_func)(int);
-bool new_func(int sid) {
+bool (*old_func)();
+bool new_func() {
 	return true;
 }
 %ctor
