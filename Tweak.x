@@ -1,16 +1,18 @@
 %hook HXClotho
-+ (bool)isSpecialServiceOrdered:(int){
++ (bool)isSpecialServiceOrdered:(int) sid{
 	return true;
 }
 
++ (bool)isSpecial102ServiceOrdered:(int) sid{
+	return true;
+}
 
-+ (bool)isSpecial102ServiceOrdered:(int){
++ (bool)isSpecial103ServiceOrdered:(int) sid{
 	return true;
 }
-+ (bool)isSpecial103ServiceOrdered:(int){
+
++ (bool)getFuncWithSid:(id) sid bits:(long long)bit{
 	return true;
 }
-+ (bool)getFuncWithSid:(id) bit:(long long){
-	return true;
-}
+
 %end
