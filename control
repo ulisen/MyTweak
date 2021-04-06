@@ -1,9 +1,9 @@
-Package: com.randomblock1.fleetsbgone
-Name: FleetsBGone
+Package: com.lisen.ths.crack
+Name: ulisen
 Version: 1.0
 Architecture: iphoneos-arm
-Description: Remove Twitter Fleets
-Maintainer: Randomblock1
-Author: Randomblock1
+Description: ths crack
+Maintainer: ulisen 
+Author: ulisen
 Section: Tweaks
 Depends: mobilesubstrate (>= 0.9.5000)
