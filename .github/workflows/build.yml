@@ -26,7 +26,7 @@ jobs:
 
 # Don't use @main, this repo is specifically for testing it.
     - name: Prepare Theos
-      uses: @main
+      uses: Randomblock1/theos-action@main
       with:
         theos-sdks: 'https://github.com/xybp888/iOS-SDKs'
       
