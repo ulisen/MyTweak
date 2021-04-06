@@ -2,7 +2,7 @@
 #import <UIKit/UIKit.h>
 
 bool (*old_func)(int);
-bool new_func(int) {
+bool new_func(int sid) {
 	return true;
 }
 %ctor
